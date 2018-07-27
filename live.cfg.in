@@ -1,0 +1,5 @@
+label job-board-client
+	menu label Job board client for ATFC Job Board system
+	kernel @LINUX@
+	append initrd=@INITRD@ @APPEND_LIVE@ bootfrom=removable chrome=neon noblank noconfig quiet 
+

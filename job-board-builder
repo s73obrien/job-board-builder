@@ -1,3 +1,7 @@
 FROM webc/isobuilder
-RUN apt-get -y update && apt-get install -y vim
 
+COPY syslinux.cfg /root/Debian-Live-config/webconverger/config/bootloaders/isolinux/syslinux/syslinux.cfg
+RUN chmod 755 /root/Debian-Live-config/webconverger/config/bootloaders/isolinux/syslinux/syslinux.cfg
+
+COPY live.cfg.in /root/Debian-Live-config/webconverger/config/bootloaders/isolinux/live.cfg.in
+RUN chmod 755 /root/Debian-Live-config/webconverger/config/bootloaders/isolinux/live.cfg.in
