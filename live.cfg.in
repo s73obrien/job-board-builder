@@ -1,5 +1,10 @@
 label job-board-client
 	menu label Job board client for ATFC Job Board system
 	kernel @LINUX@
-	append initrd=@INITRD@ @APPEND_LIVE@ bootfrom=removable chrome=neon noblank noconfig quiet 
+	append initrd=@INITRD@ @APPEND_LIVE@ bootfrom=removable chrome=neon noblank xrandr=--output%20LVDS%20--off%20--output%20HDMI%20--auto
+
+label job-board-client-debug
+	menu label Job board client for ATFC Job Board system (DEBUG)
+	kernel @LINUX@
+	append initrd=@INITRD@ @APPEND_LIVE@ bootfrom=removable chrome=neon noblank xrandr=--output%20LVDS%20--off%20--output%20HDMI%20--auto debug
 

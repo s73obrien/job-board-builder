@@ -5,3 +5,6 @@ RUN chmod 755 /root/Debian-Live-config/webconverger/config/bootloaders/isolinux/
 
 COPY live.cfg.in /root/Debian-Live-config/webconverger/config/bootloaders/isolinux/live.cfg.in
 RUN chmod 755 /root/Debian-Live-config/webconverger/config/bootloaders/isolinux/live.cfg.in
+
+COPY splash.png /root/Debian-Live-config/webconverger/config/bootloaders/isolinux/syslinux/splash.png
+RUN chmod 644 /root/Debian-Live-config/webconverger/config/bootloaders/isolinux/syslinux/splash.png
